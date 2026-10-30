@@ -28,8 +28,8 @@ class AuthDummyDataSource implements AuthDataSource {
   Future<AuthDraftDto?> fetchPrefill() async => AuthDraftDto.fromJson(const {
     'firstName': 'Ayesha',
     'lastName': 'Khan',
-    'email': 'ayesha.k@example.com',
-    'password': 'Abcd-1234',
+    'email': 'admin@gmail.com',
+    'password': 'shahryar@123',
     'phoneNumber': '3001234567',
     'acceptedTerms': true,
   });

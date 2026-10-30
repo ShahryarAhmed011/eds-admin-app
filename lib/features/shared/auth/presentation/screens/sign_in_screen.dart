@@ -13,12 +13,12 @@ import '../widgets/auth_hero_layout.dart';
 import '../widgets/auth_password_field.dart';
 import '../widgets/auth_phone_field.dart';
 
-/// "Log in or sign up": illustration on top, then phone (or email) and
-/// password, Continue, and Google / Email (or Phone) below.
+/// "Log in or sign up": illustration on top, then email (or phone) and
+/// password, Continue, and Google / Phone (or Email) below.
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
 
-  static const _start = AuthStarted(loginMethod: LoginMethod.phone);
+  static const _start = AuthStarted(loginMethod: LoginMethod.email);
 
   @override
   Widget build(BuildContext context) {

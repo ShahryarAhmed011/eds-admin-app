@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 import '../../../../../core/core.dart';
 import '../dto/auth_draft_dto.dart';
 import '../dto/auth_session_dto.dart';
@@ -14,15 +12,12 @@ class AuthRemoteDataSource implements AuthDataSource {
 
   final ApiClient _api;
 
-  /// Test account filled into the login form in debug builds only, so it
-  /// never ships in a release.
+  /// Admin account filled into the login form in debug and release builds.
   @override
-  Future<AuthDraftDto?> fetchPrefill() async => kDebugMode
-      ? AuthDraftDto.fromJson(const {
-          'phoneNumber': '3009373596',
-          'password': 'Test@123',
-        })
-      : null;
+  Future<AuthDraftDto?> fetchPrefill() async => AuthDraftDto.fromJson(const {
+    'email': 'admin@gmail.com',
+    'password': 'shahryar@123',
+  });
 
   @override
   Future<AuthSessionDto> login({
